@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Testing page, hello world</h1>
+    {% if pdf_form %}
+    <form method="POST" enctype="multipart/form-data">
+{{ pdf_form.hidden_tag() }}
+    {{ pdf_form.pdf }}
+    </form>
+    {% endif %}
+{% endblock %}
